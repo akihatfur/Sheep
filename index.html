@@ -2,15 +2,15 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sheep on Farm</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sheep Game</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <nav>
     <div>Farm Game</div>
     <div>
-      <button id="playBtn">Play</button>
+      <button id="playBtn" disabled>Play</button>
       <button id="stopBtn">Stop</button>
     </div>
   </nav>
@@ -18,16 +18,17 @@
   <div id="gameArea">
     <div id="sheep"></div>
     <div id="controls">
-      <div><button onclick="move('up')">↑</button></div>
+      <div><button data-dir="up">↑</button></div>
       <div>
-        <button onclick="move('left')">←</button>
-        <button onclick="move('down')">↓</button>
-        <button onclick="move('right')">→</button>
+        <button data-dir="left">←</button>
+        <button data-dir="down">↓</button>
+        <button data-dir="right">→</button>
       </div>
+      <div><button id="jumpBtn">⎵</button></div>
     </div>
   </div>
 
-  <footer>Fence here</footer>
+  <footer>a fence here</footer>
 
   <script src="script.js"></script>
 </body>
